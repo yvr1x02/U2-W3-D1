@@ -4,20 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      form {
+        display: block;
+        text-align: center;
+        margin: 3em;
+      }
+
+      form div {
+        margin: 1em;
+      }
+    </style>
   </head>
   <body>
-    form>
-        <div>
-            <label for="myName"></label>
-            <input type="text" id="myName" required>
-        </div>
-        <div>
-            <label for="mySurname"></label>
-            <input type="text" id="mySurname" required>
-        </div>
+    <form id="petForm">
+      <div>
+        <label for="petName"> Pet Name:</label>
+        <input type="text" id="petName" placeholder="petName" required />
+      </div>
+      <div>
+        <label for="ownerName"> Owner Name:</label>
+        <input type="text" id="ownerName" placeholder="ownerName" required />
+      </div>
+      <div>
+        <label for="species">Species:</label>
+        <input type="text" id="species" placeholder="species" required />
+      </div>
+      <div>
+        <label for="breed">Breed:</label>
+        <input type="text" id="breed" placeholder="breed" required />
+      </div>
 
-        <button type="submit">invia</button>
+      <button type="submit">invia</button>
     </form>
+
+    <h2>Pet List</h2>
+    <ul id="petList"></ul>
     <script src="./script.js"></script>
   </body>
 </html>
